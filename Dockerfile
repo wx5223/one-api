@@ -28,6 +28,9 @@ ENV GO111MODULE=on \
 
 WORKDIR /build
 
+RUN go env -w GOPROXY=https://goproxy.cn,direct \
+    && go env -w GOSUMDB=sum.golang.google.cn
+
 ADD go.mod go.sum ./
 RUN go mod download
 
