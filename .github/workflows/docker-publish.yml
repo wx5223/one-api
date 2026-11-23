@@ -12,6 +12,7 @@ permissions:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    environment: docker_hub
     steps:
       - name: Check out source
         uses: actions/checkout@v4
